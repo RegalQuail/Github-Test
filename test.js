@@ -7,7 +7,7 @@ function myFunction1() {
 }
 
 function myFunction2() {
-    points.sort(function(a, b){return a - b});
+    points.sort(function(a, b){return a - b;});
     document.getElementById("demo").innerHTML = points;
 }
 
