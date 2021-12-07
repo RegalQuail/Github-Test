@@ -31,4 +31,5 @@
     }
     
     granted ? showNotification() : showError();
+    
 })();
