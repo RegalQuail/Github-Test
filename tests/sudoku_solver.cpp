@@ -11,28 +11,35 @@ int grid[N][N] = {
     {1, 3, 0, 0, 0, 0, 2, 5, 0},
     {0, 0, 0, 0, 0, 0, 0, 7, 4},
     {0, 0, 5, 2, 0, 6, 3, 0, 0}
-;
+};
 
-bool isPresentInCol(int col, int num){
-    for (int row = 0; row < N; row++)
-        if (grid[row][col] == num)
+bool isPresentInCol(int col, int num) {
+    for (int row = 0; row < N; row++) {
+        if (grid[row][col] == num) {
             return true;
-    return false;    
+        }    
+    return false;
+    }    
 }
 
 bool isPresentInRow(int row, int num) {
-    for (int col = 0; col < N; col++)
-        if (grid[row][col] == num)
+    for (int col = 0; col < N; col++) {
+        if (grid[row][col] == num) {
             return true;
-    return false;    
+        }
+    return false; 
+    }   
 }
 
-bool isPresentInBox(int boxStartRow, int boxStartCol, imt num) {
-    for (int row = 0; row < 3; row++)
-        for (int col = 0; col < 3; col++)
-            if (grid[row + boxStartRow][col + boxStartCol] == num)
+bool isPresentInBox(int boxStartRow, int boxStartCol, int num) {
+    for (int row = 0; row < 3; row++) {
+        for (int col = 0; col < 3; col++) {
+            if (grid[row + boxStartRow][col + boxStartCol] == num) {
             return  true;
+            }
     return false;
+        }
+    }
 }
 
 void sudokuGrid() {
@@ -47,7 +54,7 @@ void sudokuGrid() {
                 for (int i = 0; i < N; i++)
                     cout << "---";
         }
-        cout << endl
+        cout << endl;
     }
 }
 
